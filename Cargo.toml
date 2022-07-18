@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+  "abstract_factory",
+  "factory_method/maze_game",
+  "factory_method/render_dialog",
+  "simple_factory",
+]

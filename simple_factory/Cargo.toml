@@ -1,0 +1,12 @@
+[package]
+edition = "2021"
+name = "simple_factory"
+version = "0.1.0"
+
+[[bin]]
+name = "simple_factory"
+path = "main.rs"
+
+[[bin]]
+name = "simple_factory_dyn"
+path = "main_dyn.rs"

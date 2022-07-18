@@ -1,0 +1,8 @@
+[package]
+edition = "2021"
+name = "dialog_button"
+version = "0.1.0"
+
+[[bin]]
+name = "render_dialog"
+path = "main.rs"

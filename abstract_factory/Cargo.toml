@@ -1,0 +1,12 @@
+[package]
+edition = "2021"
+name = "abstract_factory"
+version = "0.1.0"
+
+[[bin]]
+name = "abstract_factory"
+path = "main.rs"
+
+[[bin]]
+name = "abstract_factory_dyn"
+path = "main_dyn.rs"
