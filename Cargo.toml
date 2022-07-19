@@ -7,5 +7,6 @@ members = [
   "factory_method/render_dialog",
   "prototype",
   "simple_factory",
+  "singleton",
   "static_creation_method",
 ]
