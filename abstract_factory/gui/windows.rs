@@ -6,13 +6,13 @@ pub struct WindowsFactory;
 
 impl Button for WindowsButton {
     fn press(&self) {
-        println!("Windows button");
+        println!("Windows button has pressed");
     }
 }
 
 impl Checkbox for WindowsCheckbox {
     fn switch(&self) {
-        println!("Windows checkbox");
+        println!("Windows checkbox has switched");
     }
 }
 

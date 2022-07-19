@@ -19,7 +19,7 @@ fn render(factory: &Box<dyn gui::GuiFactoryDynamic>) {
 fn main() {
     use gui::{macos::MacFactory, windows::WindowsFactory};
 
-    let windows = true;
+    let windows = false;
 
     // Allocate a factory object in runtime depending on unpredictable input.
     let factory: Box<dyn gui::GuiFactoryDynamic> = if windows {

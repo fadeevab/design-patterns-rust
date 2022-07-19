@@ -6,13 +6,13 @@ pub struct MacFactory;
 
 impl Button for MacButton {
     fn press(&self) {
-        println!("MacOS button");
+        println!("MacOS button has pressed");
     }
 }
 
 impl Checkbox for MacCheckbox {
     fn switch(&self) {
-        println!("MacOS checkbox");
+        println!("MacOS checkbox has switched");
     }
 }
 
