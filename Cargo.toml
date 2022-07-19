@@ -2,7 +2,9 @@
 
 members = [
   "abstract_factory",
+  "builder",
   "factory_method/maze_game",
   "factory_method/render_dialog",
   "simple_factory",
+  "static_creation_method",
 ]
