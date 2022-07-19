@@ -5,6 +5,7 @@ members = [
   "builder",
   "factory_method/maze_game",
   "factory_method/render_dialog",
+  "prototype",
   "simple_factory",
   "static_creation_method",
 ]

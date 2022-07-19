@@ -1,8 +1,8 @@
 [package]
 edition = "2021"
-name = "builder"
+name = "prototype"
 version = "0.1.0"
 
 [[bin]]
-name = "builder"
+name = "prototype"
 path = "main.rs"
