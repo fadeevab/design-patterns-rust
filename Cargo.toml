@@ -1,12 +1,11 @@
 [workspace]
 
 members = [
-  "abstract_factory",
-  "builder",
-  "factory_method/maze_game",
-  "factory_method/render_dialog",
-  "prototype",
-  "simple_factory",
-  "singleton",
-  "static_creation_method",
+  "creational/abstract-factory",
+  "creational/factory-method/maze-game",
+  "creational/factory-method/render-dialog",
+  "creational/prototype",
+  "creational/simple-factory",
+  "creational/singleton",
+  "creational/static-creation-method",
 ]

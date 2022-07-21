@@ -1,8 +1,8 @@
 [package]
 edition = "2021"
-name = "builder"
+name = "static-creation-method"
 version = "0.1.0"
 
 [[bin]]
-name = "builder"
+name = "static-creation-method"
 path = "main.rs"
