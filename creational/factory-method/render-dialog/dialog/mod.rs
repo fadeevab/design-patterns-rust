@@ -12,6 +12,6 @@ pub trait Dialog {
     }
 
     fn refresh(&self) {
-        println!("Refresh");
+        println!("Dialog - Refresh");
     }
 }

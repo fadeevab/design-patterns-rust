@@ -4,9 +4,7 @@ mod dialog;
 use dialog::{html::HtmlDialog, windows::WindowsDialog, Dialog};
 
 fn main() {
-    let windows = false;
-
-    let dialog: Box<dyn Dialog> = if windows {
+    let dialog: Box<dyn Dialog> = if cfg!(windows) {
         Box::new(WindowsDialog)
     } else {
         Box::new(HtmlDialog)
