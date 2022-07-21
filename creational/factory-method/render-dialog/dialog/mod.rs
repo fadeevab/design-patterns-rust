@@ -1,9 +1,7 @@
 pub mod html;
 pub mod windows;
 
-pub trait Button {
-    fn render(&self);
-}
+use crate::button::Button;
 
 pub trait Dialog {
     fn create_button(&self) -> Box<dyn Button>;

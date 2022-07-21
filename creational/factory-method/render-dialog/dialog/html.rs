@@ -1,12 +1,6 @@
-use super::{Button, Dialog};
+use super::Dialog;
 
-pub struct HtmlButton;
-
-impl Button for HtmlButton {
-    fn render(&self) {
-        println!("Drawing an HTML button ");
-    }
-}
+use crate::button::{html::HtmlButton, Button};
 
 pub struct HtmlDialog;
 

@@ -1,12 +1,6 @@
-use super::{Button, Dialog};
+use super::Dialog;
 
-pub struct WindowsButton;
-
-impl Button for WindowsButton {
-    fn render(&self) {
-        println!("Drawing a Windows button");
-    }
-}
+use crate::button::{windows::WindowsButton, Button};
 
 pub struct WindowsDialog;
 
