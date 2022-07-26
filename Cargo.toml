@@ -2,6 +2,7 @@
 
 members = [
   "creational/abstract-factory",
+  "creational/builder",
   "creational/factory-method/maze-game",
   "creational/factory-method/render-dialog",
   "creational/prototype",
