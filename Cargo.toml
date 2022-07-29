@@ -9,4 +9,5 @@ members = [
   "creational/simple-factory",
   "creational/singleton",
   "creational/static-creation-method",
+  "structural/adapter",
 ]
