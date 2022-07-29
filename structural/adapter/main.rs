@@ -1,27 +1,30 @@
 mod adaptee;
 mod adapter;
+mod target;
 
-use adaptee::Adaptee;
-use adapter::Adapter;
+use adaptee::SpecificTarget;
+use adapter::TargetAdapter;
+use target::{OrdinaryTarget, Target};
 
-trait Target {
-    fn request(&self) -> String;
-}
-
-fn client(target: impl Target) {
+fn call_client(target: impl Target) {
     println!("'{}'", target.request());
 }
 
 fn main() {
-    let adaptee = Adaptee;
+    let target = OrdinaryTarget;
+
+    print!("A compatible target can be directly called: ");
+    call_client(target);
+
+    let adaptee = SpecificTarget;
 
     println!(
-        "Adaptee is incompatible with the client: '{}'",
+        "Adaptee is incompatible with client: '{}'",
         adaptee.specific_request()
     );
 
-    let adapter = Adapter::new(adaptee);
+    let adapter = TargetAdapter::new(adaptee);
 
-    print!("But with adapter client can call it's method: ");
-    client(adapter);
+    print!("But with adapter client can call its method: ");
+    call_client(adapter);
 }

@@ -1,6 +1,6 @@
-pub struct Adaptee;
+pub struct SpecificTarget;
 
-impl Adaptee {
+impl SpecificTarget {
     pub fn specific_request(&self) -> String {
         ".tseuqer cificepS".into()
     }
