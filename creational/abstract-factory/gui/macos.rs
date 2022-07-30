@@ -1,4 +1,4 @@
-use super::{Button, Checkbox, GuiFactoryDynamic, GuiFactory};
+use super::{Button, Checkbox, GuiFactory, GuiFactoryDynamic};
 
 pub struct MacButton;
 pub struct MacCheckbox;
