@@ -1,0 +1,8 @@
+[package]
+edition = "2021"
+name = "decorator"
+version = "0.1.0"
+
+[[bin]]
+name = "decorator"
+path = "main.rs"
