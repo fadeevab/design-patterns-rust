@@ -1,0 +1,12 @@
+[package]
+edition = "2021"
+name = "flyweight"
+version = "0.1.0"
+
+[[bin]]
+name = "flyweight"
+path = "main.rs"
+
+[dependencies]
+draw = "0.3"
+rand = "0.8"
