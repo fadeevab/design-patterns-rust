@@ -10,4 +10,5 @@ members = [
   "creational/singleton",
   "creational/static-creation-method",
   "structural/adapter",
+  "structural/bridge",
 ]

@@ -1,0 +1,8 @@
+[package]
+edition = "2021"
+name = "bridge"
+version = "0.1.0"
+
+[[bin]]
+name = "bridge"
+path = "main.rs"
