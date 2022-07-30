@@ -11,4 +11,5 @@ members = [
   "creational/static-creation-method",
   "structural/adapter",
   "structural/bridge",
+  "structural/composite",
 ]
