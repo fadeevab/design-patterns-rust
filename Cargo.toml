@@ -18,4 +18,5 @@ members = [
   "structural/proxy",
   "behavioral/chain-of-responsibility",
   "behavioral/command",
+  "behavioral/iterator",
 ]
