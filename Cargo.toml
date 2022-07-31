@@ -17,4 +17,5 @@ members = [
   "structural/flyweight",
   "structural/proxy",
   "behavioral/chain-of-responsibility",
+  "behavioral/command",
 ]

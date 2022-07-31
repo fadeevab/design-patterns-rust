@@ -1,0 +1,12 @@
+[package]
+edition = "2021"
+name = "command"
+version = "0.1.0"
+
+[[bin]]
+name = "command"
+path = "main.rs"
+
+[dependencies]
+cursive = {version = "0.19", default-features = false, features = ["termion-backend"]}
+owning_ref = "0.4"
