@@ -20,4 +20,5 @@ members = [
   "behavioral/command",
   "behavioral/iterator",
   "behavioral/mediator",
+  "behavioral/memento",
 ]
