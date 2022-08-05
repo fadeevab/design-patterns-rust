@@ -1,0 +1,8 @@
+[package]
+edition = "2021"
+name = "observer"
+version = "0.1.0"
+
+[[bin]]
+name = "observer"
+path = "main.rs"
