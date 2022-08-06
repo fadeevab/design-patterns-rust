@@ -1,10 +1,10 @@
 [package]
 edition = "2021"
-name = "command"
+name = "state"
 version = "0.1.0"
 
 [[bin]]
-name = "command"
+name = "state"
 path = "main.rs"
 
 [dependencies]
