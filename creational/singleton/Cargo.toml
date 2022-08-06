@@ -11,5 +11,5 @@ name = "singleton"
 path = "safe.rs"
 
 [[bin]]
-name = "singleton_lazy"
+name = "singleton-lazy"
 path = "lazy.rs"
