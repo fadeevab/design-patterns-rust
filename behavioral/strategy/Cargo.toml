@@ -1,0 +1,12 @@
+[package]
+edition = "2021"
+name = "strategy"
+version = "0.1.0"
+
+[[bin]]
+name = "strategy"
+path = "main.rs"
+
+[[bin]]
+name = "strategy-lambda"
+path = "lambda.rs"
