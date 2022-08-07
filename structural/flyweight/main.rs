@@ -1,9 +1,9 @@
 mod forest;
 
-use draw::{render, render::svg::SvgRenderer, Canvas, RGB};
+use draw::{render, render::svg::SvgRenderer, Canvas};
 use rand::Rng;
 
-use crate::forest::Forest;
+use crate::forest::{Forest, TreeColor};
 
 const CANVAS_SIZE: u32 = 500;
 const TREES_TO_DRAW: u32 = 100000;
@@ -18,16 +18,16 @@ fn main() {
         forest.plant_tree(
             rng.gen_range(0..CANVAS_SIZE),
             rng.gen_range(0..CANVAS_SIZE),
+            TreeColor::Color1,
             "Summer Oak".into(),
-            RGB::new(0, 0xff, 0), // Green
             "Oak texture stub".into(),
         );
 
         forest.plant_tree(
             rng.gen_range(0..CANVAS_SIZE),
             rng.gen_range(0..CANVAS_SIZE),
+            TreeColor::Color2,
             "Autumn Oak".into(),
-            RGB::new(0xff, 0xa5, 0), // Orange
             "Autumn Oak texture stub".into(),
         );
     }
