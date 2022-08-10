@@ -15,7 +15,7 @@ impl Doctor {
 impl Department for Doctor {
     fn handle(&mut self, patient: &mut Patient) {
         if patient.doctor_check_up_done {
-            println!("Doctor checkup has been already done");
+            println!("A doctor checkup is already done");
         } else {
             println!("Doctor checking a patient {}", patient.name);
             patient.doctor_check_up_done = true;

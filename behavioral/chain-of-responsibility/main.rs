@@ -15,6 +15,8 @@ fn main() {
         ..Patient::default()
     };
 
+    // Reception handles a patient passing him to the next link in the chain.
+    // Reception -> Doctor -> Medical -> Cashier.
     reception.execute(&mut patient);
 
     println!("\nThe patient has been already handled:\n");

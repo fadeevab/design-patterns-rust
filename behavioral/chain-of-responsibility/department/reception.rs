@@ -16,7 +16,7 @@ impl Reception {
 impl Department for Reception {
     fn handle(&mut self, patient: &mut Patient) {
         if patient.registration_done {
-            println!("Patient registration already done");
+            println!("Patient registration is already done");
         } else {
             println!("Reception registering a patient {}", patient.name);
             patient.registration_done = true;

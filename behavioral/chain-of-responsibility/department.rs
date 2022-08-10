@@ -10,6 +10,10 @@ pub use reception::Reception;
 
 use crate::patient::Patient;
 
+/// A single role of objects that make up a chain.
+/// A typical trait implementation must have `handle` and `next` methods,
+/// while `execute` is implemented by default and contains a proper chaining
+/// logic.
 pub trait Department {
     fn execute(&mut self, patient: &mut Patient) {
         self.handle(patient);
@@ -23,6 +27,7 @@ pub trait Department {
     fn next(&mut self) -> &mut Option<Box<dyn Department>>;
 }
 
+/// Helps to wrap an object into a boxed type.
 pub(self) fn into_next(
     department: impl Department + Sized + 'static,
 ) -> Option<Box<dyn Department>> {

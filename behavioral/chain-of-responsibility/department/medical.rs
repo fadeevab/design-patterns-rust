@@ -15,7 +15,7 @@ impl Medical {
 impl Department for Medical {
     fn handle(&mut self, patient: &mut Patient) {
         if patient.medicine_done {
-            println!("Medicine has been already given to a patient");
+            println!("Medicine is already given to a patient");
         } else {
             println!("Medical giving medicine to a patient {}", patient.name);
             patient.medicine_done = true;
