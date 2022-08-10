@@ -5,7 +5,7 @@ version = "0.1.0"
 
 [[bin]]
 name = "memento"
-path = "classic.rs"
+path = "conceptual.rs"
 
 [[bin]]
 name = "memento-serde"
