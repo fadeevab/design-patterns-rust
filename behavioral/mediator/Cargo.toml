@@ -1,8 +1,8 @@
 [package]
 edition = "2021"
-name = "mediator-recommended"
+name = "mediator"
 version = "0.1.0"
 
 [[bin]]
-name = "mediator-recommended"
+name = "mediator"
 path = "main.rs"
