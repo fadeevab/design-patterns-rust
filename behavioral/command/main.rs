@@ -8,6 +8,8 @@ use cursive::{
 
 use command::{Command, CopyCommand, CutCommand, PasteCommand};
 
+/// An application context to be passed into visual component callbacks.
+/// It contains a clipboard and a history of commands to be undone.
 #[derive(Default)]
 struct AppContext {
     clipboard: String,
@@ -31,6 +33,7 @@ fn main() {
     app.run();
 }
 
+/// Executes a command and then pushes it to a history array.
 fn execute(app: &mut Cursive, mut command: impl Command + 'static) {
     if command.execute(app) {
         app.with_user_data(|context: &mut AppContext| {
@@ -39,6 +42,7 @@ fn execute(app: &mut Cursive, mut command: impl Command + 'static) {
     }
 }
 
+/// Pops the last command and executes an undo action.
 fn undo(app: &mut Cursive) {
     let mut context = app.take_user_data::<AppContext>().unwrap();
     if let Some(mut command) = context.history.pop() {
