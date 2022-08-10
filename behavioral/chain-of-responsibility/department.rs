@@ -23,6 +23,8 @@ pub trait Department {
     fn next(&mut self) -> &mut Option<Box<dyn Department>>;
 }
 
-pub(self) fn into_next(department: impl Department + Sized + 'static) -> Option<Box<dyn Department>> {
+pub(self) fn into_next(
+    department: impl Department + Sized + 'static,
+) -> Option<Box<dyn Department>> {
     Some(Box::new(department))
 }

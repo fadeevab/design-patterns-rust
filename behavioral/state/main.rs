@@ -2,8 +2,10 @@ mod player;
 mod state;
 
 use cursive::{
+    event::Key,
+    view::Nameable,
     views::{Dialog, TextView},
-    Cursive, event::Key, view::Nameable,
+    Cursive,
 };
 use player::Player;
 use state::{State, StoppedState};
@@ -36,7 +38,10 @@ fn main() {
 }
 
 fn execute(s: &mut Cursive, button: &'static str) {
-    let PlayerApplication {mut player, mut state} = s.take_user_data().unwrap();
+    let PlayerApplication {
+        mut player,
+        mut state,
+    } = s.take_user_data().unwrap();
     let mut view = s.find_name::<TextView>("Player Status").unwrap();
 
     state = match button {
@@ -49,5 +54,5 @@ fn execute(s: &mut Cursive, button: &'static str) {
 
     state.render(&player, &mut view);
 
-    s.set_user_data(PlayerApplication {player, state});
+    s.set_user_data(PlayerApplication { player, state });
 }

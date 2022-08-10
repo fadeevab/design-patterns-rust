@@ -1,4 +1,4 @@
-use super::{Department, Patient, into_next};
+use super::{into_next, Department, Patient};
 
 pub struct Doctor {
     next: Option<Box<dyn Department>>,
@@ -6,7 +6,9 @@ pub struct Doctor {
 
 impl Doctor {
     pub fn new(next: impl Department + 'static) -> Self {
-        Self { next: into_next(next) }
+        Self {
+            next: into_next(next),
+        }
     }
 }
 
