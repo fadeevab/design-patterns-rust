@@ -18,7 +18,7 @@ iterator.for_each(|e| print!("{}, ", e));
 
 ## Custom Iterator
 
-In Rust, the recommended way to define your *custom* iterator is to use a
+In Rust, the recommended way to define your _custom_ iterator is to use a
 standard `Iterator` trait. The example doesn't contain a synthetic iterator
 interface, because it is really recommended to use the idiomatic Rust way.
 
@@ -37,6 +37,12 @@ e.g. `fold`, `map`, `for_each`.
 impl Iterator for UserIterator<'_> {
     fn next(&mut self) -> Option<Self::Item>;
 }
+```
+
+## How to Run
+
+```bash
+cargo run --bin iterator
 ```
 
 ## Execution Result
