@@ -3,10 +3,9 @@
 **Command** is behavioral design pattern that converts requests or
 simple operations into objects.
 
-A specific thing about Command Pattern implementation in 🦀 Rust is that
-a command instance should NOT hold a permanent reference to global context,
-instead the latter should be passed from top to down as a mutable parameter
-of the "`execute`" method:
+In 🦀 Rust, a command instance should _NOT hold a permanent reference to global
+context_, instead the latter should be passed _from top to down as a mutable
+parameter_ of the "`execute`" method:
 
 ```rust
 fn execute(&mut self, app: &mut cursive::Cursive) -> bool;
