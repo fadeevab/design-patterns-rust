@@ -1,8 +1,7 @@
 # Chain of Responsibility
 
-[**Chain of Responsibility**](https://refactoring.guru/design-patterns/chain-of-responsibility)
-is behavioral design pattern that allows passing request along the chain of
-potential handlers until one of them handles request.
+**Chain of Responsibility** is behavioral design pattern that allows passing
+request along the chain of potential handlers until one of them handles request.
 
 ## Conceptual Example
 
