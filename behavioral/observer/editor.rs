@@ -1,5 +1,7 @@
 use crate::observer::{Event, Publisher};
 
+/// Editor has its own logic and it utilizes a publisher
+/// to operate with subscribers and events.
 #[derive(Default)]
 pub struct Editor {
     publisher: Publisher,

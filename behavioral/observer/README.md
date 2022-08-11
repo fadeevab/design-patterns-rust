@@ -1,8 +1,14 @@
 # Observer
 
-In Rust, the convenient way to define a listener is to use a function as a callable object with complex logic.
+**Observer** is a behavioral design pattern that allows some objects to notify other objects about changes in their state.
 
-In this Observer example, Subscribers are either lambda functions or explicit functions subscribed to the event. Explicit function objects could be also unsubscribed (although, there could be limitations for some function types).
+**In Rust**, a convenient way to define a subscriber is to have **a function**
+as a callable object with complex logic passing it to a event publisher.
+
+In this Observer example, Subscribers are either **a lambda function** or
+**an explicit function** subscribed to the event. Explicit function objects could be also unsubscribed (although, there could be limitations for some function types).
+
+## How to Run
 
 ```bash
 cargo run --bin observer
