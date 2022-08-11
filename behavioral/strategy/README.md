@@ -1,7 +1,7 @@
 # Strategy
 
-**Strategy** turns a set of behaviors into objects and makes them
-interchangeable inside original context object.
+_**Strategy** turns a set of behaviors into objects and makes them
+interchangeable inside original context object._
 
 ## `conceptual.rs`
 

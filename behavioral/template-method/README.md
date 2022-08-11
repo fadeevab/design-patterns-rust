@@ -1,7 +1,7 @@
 # Template Method
 
-**Template Method** is a default implementation of a trait method that defines a skeleton
-of an algorithm, and other methods can be redefined in concrete types.
+_**Template Method** is a default implementation of a trait method that defines a skeleton
+of an algorithm, and other methods can be redefined in concrete types._
 
 ## Conceptual Example
 

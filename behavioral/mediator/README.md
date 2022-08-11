@@ -1,6 +1,6 @@
 # Mediator Pattern
 
-There is a research and discussion of the **Mediator pattern in Rust**:
+There is a research and discussion of the **Mediator Pattern in Rust**:
 https://github.com/fadeevab/mediator-pattern-rust.
 
 "Top-Down Ownership" approach allows to apply Mediator in Rust as it is
@@ -38,6 +38,7 @@ Freight train Train 2: Leaving
 'Train 3' is not on the station!
 ```
 
-## Reference
+## References
 
-[Mediator in Go (Example)](https://refactoring.guru/design-patterns/mediator/go/example)
+1. [Mediator Pattern in Rust](https://github.com/fadeevab/mediator-pattern-rust)
+2. [Mediator in Go (Example)](https://refactoring.guru/design-patterns/mediator/go/example)

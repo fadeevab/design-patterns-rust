@@ -1,7 +1,7 @@
 # Command
 
-**Command** is behavioral design pattern that converts requests or
-simple operations into objects.
+_**Command** is behavioral design pattern that converts requests or
+simple operations into objects._
 
 In 🦀 Rust, a command instance should _NOT hold a permanent reference to global
 context_, instead the latter should be passed _from top to down as a mutable

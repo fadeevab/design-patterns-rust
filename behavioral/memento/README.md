@@ -1,6 +1,6 @@
 # Memento
 
-**Memento** allows making snapshots of an object’s state and restoring it in future.
+_**Memento** allows making snapshots of an object’s state and restoring it in future._
 
 ## `conceptual.rs`
 

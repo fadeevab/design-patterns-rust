@@ -1,6 +1,7 @@
 # Visitor
 
-**Visitor** lets you add “external” operations to a whole class hierarchy without changing the existing code of these classes.
+_**Visitor** lets you add “external” operations to a whole class hierarchy
+without changing the existing code of these classes._
 
 A real-world example of the Visitor pattern is [serde.rs](https://serde.rs) deserialization
 model, see [Serde Data Model](https://serde.rs/data-model.html):

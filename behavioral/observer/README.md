@@ -1,6 +1,6 @@
 # Observer
 
-**Observer** is a behavioral design pattern that allows some objects to notify other objects about changes in their state.
+_**Observer** is a behavioral design pattern that allows some objects to notify other objects about changes in their state._
 
 **In Rust**, a convenient way to define a subscriber is to have **a function**
 as a callable object with complex logic passing it to a event publisher.

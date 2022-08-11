@@ -1,8 +1,8 @@
 # State
 
-The **State** pattern reminds a finite-state machine, but each state
+_The **State** pattern reminds a finite-state machine, but each state
 is represented by a separate trait (with a common supertrait) and there are
-transitions between these state traits.
+transitions between these state traits._
 
 The State Pattern is described in detail in _The Rust Book_:
 https://doc.rust-lang.org/book/ch17-03-oo-design-patterns.html
