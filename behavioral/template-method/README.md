@@ -1,7 +1,9 @@
 # Template Method
 
-Template Method is a default implementation of a trait method that defines a skeleton
+**Template Method** is a default implementation of a trait method that defines a skeleton
 of an algorithm, and other methods can be redefined in concrete types.
+
+## Conceptual Example
 
 A referenced example: [Template Method in Python](https://refactoring.guru/design-patterns/template-method/python/example)
 
