@@ -1,3 +1,4 @@
+/// A music track.
 pub struct Track {
     pub title: String,
     pub duration: u32,
@@ -14,6 +15,7 @@ impl Track {
     }
 }
 
+/// A music player holds a playlist and it can do basic operations over it.
 pub struct Player {
     playlist: Vec<Track>,
     current_track: usize,

@@ -10,6 +10,7 @@ use cursive::{
 use player::Player;
 use state::{State, StoppedState};
 
+// Application context: a music player and a state.
 struct PlayerApplication {
     player: Player,
     state: Box<dyn State>,
@@ -42,8 +43,12 @@ fn execute(s: &mut Cursive, button: &'static str) {
         mut player,
         mut state,
     } = s.take_user_data().unwrap();
+
     let mut view = s.find_name::<TextView>("Player Status").unwrap();
 
+    // Here is how state mechanics work: the previous state
+    // executes an action and returns a new state.
+    // Each state has all 4 operations but reacts differently.
     state = match button {
         "Play" => state.play(&mut player),
         "Stop" => state.stop(&mut player),
