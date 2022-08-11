@@ -2,4 +2,4 @@
 
 _**Behavioral** design patterns are concerned with algorithms and the assignment of responsibilities between objects._
 
-☝ Each example has its own README and instructions.
+☝ Each example contains its own README and instructions.
