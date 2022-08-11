@@ -37,3 +37,7 @@ Freight train Train 2: Arrived
 Freight train Train 2: Leaving
 'Train 3' is not on the station!
 ```
+
+## Reference
+
+[Mediator in Go (Example)](https://refactoring.guru/design-patterns/mediator/go/example)

@@ -28,6 +28,6 @@ Key points:
 
 ![Text Editor screenshot](res/editor.png)
 
-## Notes
+## Reference
 
 This example is inspired by [Command in Java (Example)](https://refactoring.guru/design-patterns/command/java/example).

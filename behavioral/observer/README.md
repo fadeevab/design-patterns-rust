@@ -21,3 +21,7 @@ Save log to /path/to/log/file.txt: Load file test1.txt
 Save log to /path/to/log/file.txt: Load file test2.txt
 Email to admin@example.com: Save file test2.txt
 ```
+
+## Reference
+
+[Observer in Java (Example)](https://refactoring.guru/design-patterns/observer/java/example)

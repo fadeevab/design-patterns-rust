@@ -33,6 +33,6 @@ Medicine is already given to a patient
 Payment done
 ```
 
-## Notes
+## Reference
 
 [Chain of Responsibility in Go (Example)](https://refactoring.guru/design-patterns/chain-of-responsibility/go/example) is used as a reference for this Rust example.
