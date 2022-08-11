@@ -1,3 +1,4 @@
+/// Defines an injectable strategy for building routes.
 trait RouteStrategy {
     fn build_route(&self, from: &str, to: &str);
 }
@@ -31,7 +32,6 @@ impl<T: RouteStrategy> Navigator<T> {
     }
 
     pub fn route(&self, from: &str, to: &str) {
-        // println!("Navigator is building a route from {} to {}...", from, to);
         self.route_strategy.build_route(from, to);
     }
 }

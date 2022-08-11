@@ -5,8 +5,8 @@ version = "0.1.0"
 
 [[bin]]
 name = "strategy"
-path = "main.rs"
+path = "conceptual.rs"
 
 [[bin]]
-name = "strategy-lambda"
-path = "lambda.rs"
+name = "strategy-func"
+path = "functional.rs"
