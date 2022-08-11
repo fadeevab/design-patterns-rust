@@ -1,10 +1,23 @@
 # Design Patterns in Rust
 
-This repository is developed to be a part of the [Refactoring.Guru](https://refactoring.guru/design-patterns) project.
-
-It contains **Rust** 🦀 examples for all classic GoF design patterns.
+This repository contains **Rust** 🦀 examples for **all 23 classic GoF design
+patterns**, and even a little more. It is developed to be a part of the [Refactoring.Guru](https://refactoring.guru/design-patterns) project.
 
 ![Refactoring.Guru](https://avatars.githubusercontent.com/u/8557932?s=200&v=4)
+
+Each example is designed to introduce _a practical applicability_ in **Rust**, either
+it's a conceptual or a real world example. The Rust ideology and
+all the specifics are taken into account.
+
+1. For instance, some patterns are easy to implement with Rust, mostly
+   creational ones, e.g.
+   [Prototype](creational/prototype),
+   [Static Creation Method](creational/static-creation-method/).
+2. The [Mediator](behavioral/mediator) behavioral pattern is hardest to
+   implement with Rust, considering Rust's specific ownership model with a
+   strict borrow checker rules.
+
+You can find README.md in each example with instructions and additional explanation.
 
 ## Requirements
 
@@ -15,8 +28,6 @@ All examples can be launched via the command line, using `cargo` as follows:
 ```
 cargo run --bin adapter
 ```
-
-For the best experience, I recommend working with examples with [Visual Studio Code](https://code.visualstudio.com/).
 
 ## License
 
