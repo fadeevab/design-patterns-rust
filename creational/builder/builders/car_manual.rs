@@ -6,7 +6,7 @@ use crate::{
 use super::Builder;
 
 #[derive(Default)]
-pub struct ManualBuilder {
+pub struct CarManualBuilder {
     car_type: Option<CarType>,
     engine: Option<Engine>,
     gps_navigator: Option<GpsNavigator>,
@@ -14,7 +14,8 @@ pub struct ManualBuilder {
     transmission: Option<Transmission>,
 }
 
-impl Builder for ManualBuilder {
+/// Builds a car manual instead of an actual car.
+impl Builder for CarManualBuilder {
     type OutputType = Manual;
 
     fn set_car_type(&mut self, car_type: CarType) {

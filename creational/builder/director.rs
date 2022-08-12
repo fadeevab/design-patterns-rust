@@ -3,6 +3,10 @@ use crate::{
     components::{CarType, Engine, GpsNavigator, Transmission},
 };
 
+/// Director knows how to build a car.
+///
+/// However, a builder can build a car manual instead of an actual car,
+/// everything depends on the concrete builder.
 pub struct Director;
 
 impl Director {

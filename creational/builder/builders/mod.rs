@@ -3,6 +3,7 @@ mod car_manual;
 
 use crate::components::{CarType, Engine, GpsNavigator, Transmission};
 
+/// Builder defines how to assemble a car.
 pub trait Builder {
     type OutputType;
     fn set_car_type(&mut self, car_type: CarType);
@@ -14,4 +15,4 @@ pub trait Builder {
 }
 
 pub use car::CarBuilder;
-pub use car_manual::ManualBuilder;
+pub use car_manual::CarManualBuilder;

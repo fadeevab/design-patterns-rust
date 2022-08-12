@@ -5,7 +5,7 @@ mod cars;
 mod components;
 mod director;
 
-use builders::{Builder, CarBuilder, ManualBuilder};
+use builders::{Builder, CarBuilder, CarManualBuilder};
 use cars::{Car, Manual};
 use director::Director;
 
@@ -23,7 +23,7 @@ fn main() {
     let car: Car = car_builder.build();
     println!("Car built: {:?}\n", car.car_type());
 
-    let mut manual_builder = ManualBuilder::default();
+    let mut manual_builder = CarManualBuilder::default();
 
     // Director may know several building recipes.
     Director::construct_city_car(&mut manual_builder);
