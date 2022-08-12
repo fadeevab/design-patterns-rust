@@ -1,9 +1,11 @@
 //! Dynamic dispatch affects performance in runtime, thus, you might
-//! prefer implementation via generics to make compiler figure out a proper
-//! factory type. See `dispatch_static.rs`.
+//! prefer implementation via generics to make the compiler figure out a proper
+//! factory type.
 
 mod gui;
 
+/// The client code calls the creation methods of a factory object instead of
+/// creating products directly with a constructor call.
 fn render(factory: &Box<dyn gui::GuiFactoryDynamic>) {
     let button1 = factory.create_button();
     let button2 = factory.create_button();

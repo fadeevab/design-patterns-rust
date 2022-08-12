@@ -1,10 +1,10 @@
-//! Generics make compiler create a code that doesn't require
+//! Generics allow the compiler to create a code that doesn't require
 //! dynamic dispatch in runtime aka virtual method invocation.
 
 mod gui;
 
 // Factory object should be passed as a parameter to a generic function
-// with a common code of factory invocation.
+// with a client code that contains factory invocation.
 fn render(factory: impl gui::GuiFactory) {
     let button1 = factory.create_button();
     let button2 = factory.create_button();

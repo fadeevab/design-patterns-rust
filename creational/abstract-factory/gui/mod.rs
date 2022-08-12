@@ -9,6 +9,7 @@ pub trait Checkbox {
     fn switch(&self);
 }
 
+/// Abstract Factory defined using generics.
 pub trait GuiFactory {
     type B: Button;
     type C: Checkbox;
@@ -17,6 +18,7 @@ pub trait GuiFactory {
     fn create_checkbox(&self) -> Self::C;
 }
 
+/// Abstract Factory defined using Box pointer.
 pub trait GuiFactoryDynamic {
     fn create_button(&self) -> Box<dyn Button>;
     fn create_checkbox(&self) -> Box<dyn Checkbox>;
