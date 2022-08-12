@@ -8,6 +8,7 @@ pub trait Room {
     fn render(&self);
 }
 
+/// Maze game has a factory method producing different rooms.
 pub trait MazeGame {
     type RoomImpl: Room;
 
