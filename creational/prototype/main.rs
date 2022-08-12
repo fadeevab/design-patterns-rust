@@ -12,6 +12,7 @@ fn main() {
         radius: 10,
     };
 
+    // Prototype in action.
     let mut circle2 = circle1.clone();
     circle2.radius = 77;
 
