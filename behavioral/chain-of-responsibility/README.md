@@ -5,13 +5,27 @@ request along the chain of potential handlers until one of them handles request.
 
 ## Conceptual Example
 
+The example demonstrates processing a patient through a chain of departments.
 The chain of responsibility is constructed as follows:
 
 ```
 Patient -> Reception -> Doctor -> Medical -> Cashier
 ```
 
-How to execute the example:
+💡 The chain is constructed using `Box` pointers, which means dynamic dispatch
+in runtime. Why? It seems quite difficult to narrow down implementation
+to a strict compile-time typing using generics: in order to construct a type
+of a full chain Rust needs full knowledge of the "next of the next" link in the
+chain. Thus, it would look like this:
+
+```rust
+let mut reception = Reception::<Doctor::<Medical::<Cashier>>>::new(doctor); // 😱
+```
+
+`Box` allows chaining the links of any chaining behavior type
+(inherited from `trait Department` in this example).
+
+## How to Execute
 
 ```bash
 cargo run --bin chain-of-responsibility
