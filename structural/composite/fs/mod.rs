@@ -5,5 +5,5 @@ pub use file::File;
 pub use folder::Folder;
 
 pub trait Component {
-    fn search(&self, keyword: &String);
+    fn search(&self, keyword: &str);
 }
