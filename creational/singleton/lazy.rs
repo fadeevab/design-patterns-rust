@@ -1,13 +1,13 @@
 //! Taken from: https://stackoverflow.com/questions/27791532/how-do-i-create-a-global-mutable-singleton
 //!
-//! Rust doesn't really allows a singleton pattern without `unsafe` because it
-//! doesn't have a safe mutable global state!
+//! Rust doesn't really allow a singleton pattern without `unsafe` because it
+//! doesn't have a safe mutable global state.
 //!
-//! Crates like `lazy-static` are actually implemented via `unsafe` with
-//! `static mut` manipulation.
+//! `lazy-static` allows declaring a static variable with lazy initialization
+//! at first access. It is actually implemented via `unsafe` with `static mut`
+//! manipulation, however, it keeps your code clear of `unsafe` blocks.
 //!
-//! Better: use no global variables at all and pass everything around.
-//! The oldest living variable is an object created at the start of the `main()`.
+//! `Mutex` provides safe access to a single object.
 
 use lazy_static::lazy_static;
 use std::sync::Mutex;
