@@ -4,16 +4,15 @@ _**Memento** allows making snapshots of an object’s state and restoring it in 
 
 ## `conceptual.rs`
 
-A conceptual example of Memento pattern.
+This is a conceptual example of Memento pattern. Keep in mind, that saving and restoring objects can be done via `serde` framework, see an example below.
 
-However, in Rust, a storing and restoring objects can be done via `serde`
-framework (see an example below).
+### How to Run
 
 ```bash
 cargo run --bin memento
 ```
 
-Output:
+### Output
 
 ```
 Originator backup: '1'
@@ -25,8 +24,8 @@ Restored to state: 1
 ## `serde.rs`
 
 A common way to make a structure serializable is to derive `Serialize` and
-`Deserialize` traits from `serde` crate. Then the type instance can be converted
-to many different formats (e.g. JSON with `serde_json` crate).
+`Deserialize` traits from `serde` crate. Then an object of serializable type
+can be converted to many different formats, e.g. JSON with `serde_json` crate.
 
 ```rust
 use serde::{Deserialize, Serialize};
@@ -37,13 +36,13 @@ struct Originator {
 }
 ```
 
-Test it:
+### How to Run
 
 ```bash
 cargo run --bin memento-serde
 ```
 
-Output:
+### Output
 
 ```
 {"state":1}
