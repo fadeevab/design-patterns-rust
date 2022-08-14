@@ -1,3 +1,5 @@
+[![Design Patterns in Rust](https://github.com/fadeevab/design-patterns-rust/workflows/Test%20All%20Patterns/badge.svg)](https://github.com/fadeevab/design-patterns-rust)
+
 # Design Patterns in Rust
 
 This repository contains **Rust** 🦀 examples for **all 23 classic GoF design
