@@ -18,13 +18,13 @@ jobs:
       - name: Run Rustfmt
         run: cargo fmt -- --check
       - run: cargo run --bin chain-of-responsibility
-      - run: cargo build --bin command # It needs rendering TUI
+      - run: cargo build --bin command # TUI. It can run on the local machine.
       - run: cargo run --bin iterator
       - run: cargo run --bin mediator
       - run: cargo run --bin memento
       - run: cargo run --bin memento-serde
       - run: cargo run --bin observer
-      - run: cargo build --bin state # It needs rendering TUI
+      - run: cargo build --bin state # TUI. It can run on the local machine.
       - run: cargo run --bin strategy
       - run: cargo run --bin strategy-func
       - run: cargo run --bin template-method
@@ -38,7 +38,7 @@ jobs:
       - run: cargo run --bin simple-factory
       - run: cargo run --bin singleton
       - run: cargo run --bin singleton-lazy
-      # - run: cargo run --bin singleton-mutex # It needs Rust 1.63
+      # - run: cargo run --bin singleton-mutex # Requires Rust 1.63
       - run: cargo run --bin static-creation-method
       - run: cargo run --bin adapter
       - run: cargo run --bin bridge
