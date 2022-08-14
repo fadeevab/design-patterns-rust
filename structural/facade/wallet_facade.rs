@@ -3,6 +3,7 @@ use crate::{
     wallet::Wallet,
 };
 
+/// Facade hides a complex logic behind the API.
 pub struct WalletFacade {
     account: Account,
     wallet: Wallet,
