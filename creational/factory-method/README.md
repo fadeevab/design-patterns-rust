@@ -14,7 +14,7 @@ https://en.wikipedia.org/wiki/Factory_method_pattern
 ### How to Run
 
 ```bash
-cargo run --bin maze-game
+cargo run --bin factory-method-maze-game
 ```
 
 ### Output
@@ -40,7 +40,7 @@ as a reference.
 ### How to Run
 
 ```bash
-cargo run --bin render-dialog
+cargo run --bin factory-method-render-dialog
 ```
 
 ### Output

@@ -1,0 +1,49 @@
+name: Test All Patterns
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Rustfmt
+        run: cargo fmt -- --check
+      - run: cargo run --bin chain-of-responsibility
+      - run: cargo build --bin command # It needs rendering TUI
+      - run: cargo run --bin iterator
+      - run: cargo run --bin mediator
+      - run: cargo run --bin memento
+      - run: cargo run --bin memento-serde
+      - run: cargo run --bin observer
+      - run: cargo build --bin state # It needs rendering TUI
+      - run: cargo run --bin strategy
+      - run: cargo run --bin strategy-func
+      - run: cargo run --bin template-method
+      - run: cargo run --bin visitor
+      - run: cargo run --bin abstract-factory
+      - run: cargo run --bin abstract-factory-dyn
+      - run: cargo run --bin builder
+      - run: cargo run --bin factory-method-maze-game
+      - run: cargo run --bin factory-method-render-dialog
+      - run: cargo run --bin prototype
+      - run: cargo run --bin simple-factory
+      - run: cargo run --bin singleton
+      - run: cargo run --bin singleton-lazy
+      # - run: cargo run --bin singleton-mutex # It needs Rust 1.63
+      - run: cargo run --bin static-creation-method
+      - run: cargo run --bin adapter
+      - run: cargo run --bin bridge
+      - run: cargo run --bin composite
+      - run: cargo run --bin decorator
+      - run: cargo run --bin facade
+      - run: cargo run --bin flyweight
+      - run: cargo run --bin proxy

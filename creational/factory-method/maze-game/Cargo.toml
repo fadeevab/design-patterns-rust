@@ -4,5 +4,5 @@ name = "maze-game"
 version = "0.1.0"
 
 [[bin]]
-name = "maze-game"
+name = "factory-method-maze-game"
 path = "main.rs"

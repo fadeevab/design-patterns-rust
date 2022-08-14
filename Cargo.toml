@@ -1,6 +1,16 @@
 [workspace]
 
 members = [
+  "behavioral/chain-of-responsibility",
+  "behavioral/command",
+  "behavioral/iterator",
+  "behavioral/mediator",
+  "behavioral/memento",
+  "behavioral/observer",
+  "behavioral/state",
+  "behavioral/strategy",
+  "behavioral/template-method",
+  "behavioral/visitor",
   "creational/abstract-factory",
   "creational/builder",
   "creational/factory-method/maze-game",
@@ -16,14 +26,4 @@ members = [
   "structural/facade",
   "structural/flyweight",
   "structural/proxy",
-  "behavioral/chain-of-responsibility",
-  "behavioral/command",
-  "behavioral/iterator",
-  "behavioral/mediator",
-  "behavioral/memento",
-  "behavioral/observer",
-  "behavioral/state",
-  "behavioral/strategy",
-  "behavioral/template-method",
-  "behavioral/visitor",
 ]

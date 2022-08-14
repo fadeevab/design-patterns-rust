@@ -11,6 +11,12 @@ model, see [Serde Data Model](https://serde.rs/data-model.html):
 
 Let's reproduce this deserializing model in our example.
 
+## How to Run
+
+```bash
+cargo run --bin visitor
+```
+
 ## Execution Result
 
 ```

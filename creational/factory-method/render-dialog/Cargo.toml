@@ -4,5 +4,5 @@ name = "render-dialog"
 version = "0.1.0"
 
 [[bin]]
-name = "render-dialog"
+name = "factory-method-render-dialog"
 path = "main.rs"

@@ -24,7 +24,9 @@ All examples can be launched via the command line, using `cargo` as follows:
 cargo run --bin adapter
 ```
 
-You can find a proper target in `Cargo.toml` of each example:
+👉 You can find ALL targets in [.github/workflows/test.yml](.github/workflows/test.yml).
+
+Each target name can be found in `Cargo.toml` of each example:
 
 ```toml
 [[bin]]
@@ -32,8 +34,7 @@ name = "adapter"
 path = "main.rs"
 ```
 
-Each example contains a **README.md** with instructions and additional
-explanations.
+Also, the examples contain a **README.md** with instructions and additional explanations.
 
 ## 💡 Overview
 
