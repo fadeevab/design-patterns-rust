@@ -2,6 +2,7 @@ use std::collections::HashMap;
 
 use super::{application::Application, Server};
 
+/// NGINX server is a proxy to an application server.
 pub struct NginxServer {
     application: Application,
     max_allowed_requests: u32,
