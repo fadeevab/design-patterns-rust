@@ -2,6 +2,9 @@
 
 # Design Patterns in Rust
 
+<img width="150" height="150" src="https://avatars.githubusercontent.com/u/8557932?s=200&v=4" align="left" />
+<img width="150" height="150" src="https://www.rust-lang.org/logos/rust-logo-512x512.png" style="padding-left:20px" />
+
 This repository contains **Rust** 🦀 examples for **all 23 classic GoF design
 patterns**, and even a little more.
 
@@ -12,9 +15,6 @@ are taken into account.
 
 The repository is developed to be a part of the
 [Refactoring.Guru](https://refactoring.guru/design-patterns) project.
-
-<img align="left" width="200" height="200" src="https://avatars.githubusercontent.com/u/8557932?s=200&v=4" />
-<img width="200" height="200" src="https://www.rust-lang.org/logos/rust-logo-512x512.png" style="padding-left:20px" />
 
 ## 🔧 Requirements
 
