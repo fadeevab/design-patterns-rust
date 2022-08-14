@@ -13,3 +13,7 @@ path = "safe.rs"
 [[bin]]
 name = "singleton-lazy"
 path = "lazy.rs"
+
+[[bin]]
+name = "singleton-mutex"
+path = "mutex.rs"
