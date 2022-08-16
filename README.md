@@ -71,6 +71,12 @@ cargo run --bin flyweight
 cargo run --bin proxy
 ```
 
+Some examples have visual output.
+
+| Flyweight | State | Command |
+| --------- | ----- | ------- |
+| [<img width="150" src="structural/flyweight/res/forest.svg"/>](structural/flyweight) | [<img width="246" src="behavioral/state/images/playing.png"/>](behavioral/state) | [<img width="246" src="behavioral/command/res/editor.png"/>](behavioral/command) |
+
 ## 💡 Notes
 
 Interestingly, in Rust:
