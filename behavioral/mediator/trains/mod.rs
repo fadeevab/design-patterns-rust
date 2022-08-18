@@ -6,6 +6,7 @@ pub use passenger_train::PassengerTrain;
 
 use crate::train_station::Mediator;
 
+// A train gets a mediator object by reference.
 pub trait Train {
     fn name(&self) -> &String;
     fn arrive(&mut self, mediator: &mut dyn Mediator);
