@@ -2,6 +2,7 @@ use std::rc::Rc;
 
 use draw::{Canvas, Drawing, Shape, Style, RGB};
 
+#[derive(Clone, PartialEq, Eq, Hash)]
 pub enum TreeColor {
     Color1,
     Color2,
@@ -18,6 +19,9 @@ impl TreeColor {
     }
 }
 
+/// A cacheable item. It derives `PartialEq`, `Eq`, and `Hash` in order to be
+/// used in the `HashSet`.
+#[derive(Clone, PartialEq, Eq, Hash)]
 pub struct TreeKind {
     color: TreeColor,
     _name: String,

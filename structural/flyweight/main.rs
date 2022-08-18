@@ -38,11 +38,12 @@ fn main() {
     render::save(&canvas, "res/forest.svg", SvgRenderer::new()).expect("Rendering");
 
     println!("{} trees drawn", TREES_TO_DRAW);
-    println!("---------------------");
+    println!("Cache length: {} tree kinds", forest.cache_len());
+    println!("-------------------------------");
     println!("Memory usage:");
     println!("Tree size (16 bytes) * {}", TREES_TO_DRAW);
     println!("+ TreeKind size (~30 bytes) * {}", TREE_TYPES);
-    println!("---------------------");
+    println!("-------------------------------");
     println!(
         "Total: {}MB (instead of {}MB)",
         ((TREES_TO_DRAW * 16 + TREE_TYPES * 30) / 1024 / 1024),

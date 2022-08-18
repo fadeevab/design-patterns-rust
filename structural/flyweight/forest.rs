@@ -1,29 +1,40 @@
 mod tree;
 
 use draw::Canvas;
-use std::{collections::HashMap, rc::Rc};
+use std::{collections::HashSet, rc::Rc};
 use tree::{Tree, TreeKind};
 
 pub use self::tree::TreeColor;
 
+/// Forest implements an internal cache that is hidden behind the public API.
+///
+/// The point is having an opaque cache implementation. It can use a hash set,
+/// FIFO, or even a simple vector.
+///
+/// Here are the key points:
+/// - `cache` is of `HashSet` type, so it can hold only a single
+///    instance of a `TreeKind`,
+/// - `Rc` is needed to get the reference on the tree kind without
+///    cloning the full structure,
+/// - `TreeKind` must derive `Eq`, `PartialEq`, and `Hash` traits to be
+///    used in the `HashSet`.
 #[derive(Default)]
 pub struct Forest {
-    pub tree_kinds: HashMap<String, Rc<TreeKind>>,
-    pub trees: Vec<Tree>,
+    cache: HashSet<Rc<TreeKind>>,
+    trees: Vec<Tree>,
 }
 
 impl Forest {
     pub fn plant_tree(&mut self, x: u32, y: u32, color: TreeColor, name: String, data: String) {
-        // Here is the substance of the Flywheight Pattern:
+        let tree_kind = TreeKind::new(color, name.clone(), data);
+
+        // Here is an essence of Flyweight: it's an internal cache,
         // there is always a single instance of a "tree kind" structure.
-        let tree_kind = self
-            .tree_kinds
-            .entry(name.clone())
-            .or_insert(Rc::new(TreeKind::new(color, name.clone(), data)));
+        self.cache.insert(Rc::new(tree_kind.clone()));
 
         // A tree kind is referenced from each tree instance using `Rc` pointer.
         // `tree_kind.clone()` increases a reference counter instead of real cloning.
-        let tree = Tree::new(x, y, tree_kind.clone());
+        let tree = Tree::new(x, y, self.cache.get(&tree_kind).unwrap().clone());
         self.trees.push(tree);
     }
 
@@ -31,5 +42,9 @@ impl Forest {
         for tree in &self.trees {
             tree.draw(canvas);
         }
+    }
+
+    pub fn cache_len(&self) -> usize {
+        self.cache.len()
     }
 }
