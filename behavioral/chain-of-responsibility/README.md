@@ -13,17 +13,22 @@ Patient -> Reception -> Doctor -> Medical -> Cashier
 ```
 
 💡 The chain is constructed using `Box` pointers, which means dynamic dispatch
-in runtime. Why? It seems quite difficult to narrow down implementation
+in runtime. **Why?** It seems quite difficult to narrow down implementation
 to a strict compile-time typing using generics: in order to construct a type
 of a full chain Rust needs full knowledge of the "next of the next" link in the
-chain. Thus, it would look like this:
+chain. Thus, it ***would*** look like this:
 
 ```rust
 let mut reception = Reception::<Doctor::<Medical::<Cashier>>>::new(doctor); // 😱
 ```
 
-`Box` allows chaining the links of any chaining behavior type
-(inherited from `trait Department` in this example).
+Instead, `Box` allows chaining in any combination:
+
+```rust
+let mut reception = Reception::new(doctor); // 👍
+
+let mut reception = Reception::new(cashier); // 🕵️‍♀️
+```
 
 ## How to Execute
 
