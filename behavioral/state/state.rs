@@ -6,18 +6,19 @@ pub struct StoppedState;
 pub struct PausedState;
 pub struct PlayingState;
 
-/// A base state supertrait defines methods all state subtraits should implement.
-/// There are also `next` and `prev` methods in a separate `impl dyn State`
-/// block below, those are default implementations which cannot be overridden.
+/// There is a base `State` trait with methods `play` and `stop` which make
+/// state transitions. There are also `next` and `prev` methods in a separate
+/// `impl dyn State` block below, those are default implementations
+/// that cannot be overridden.
 ///
-/// What is the `self: Box<Self>` notation? We use state as follows:
+/// What is the `self: Box<Self>` notation? We use the state as follows:
 /// ```rust
 ///   let prev_state = Box::new(PlayingState);
 ///   let next_state = prev_state.play(&mut player);
 /// ```
-/// A method `play` receives the whole `Box<PlayingState>` object,
+/// A method `play` receives a whole `Box<PlayingState>` object,
 /// and not just `PlayingState`. The previous state "disappears" in the method,
-/// in turn it returns a new `Box<PausedState>` state object.
+/// in turn, it returns a new `Box<PausedState>` state object.
 pub trait State {
     fn play(self: Box<Self>, player: &mut Player) -> Box<dyn State>;
     fn stop(self: Box<Self>, player: &mut Player) -> Box<dyn State>;
@@ -68,7 +69,9 @@ impl State for PausedState {
 }
 
 impl State for PlayingState {
-    fn play(self: Box<Self>, _: &mut Player) -> Box<dyn State> {
+    fn play(self: Box<Self>, player: &mut Player) -> Box<dyn State> {
+        player.pause();
+
         // Playing -> Paused.
         Box::new(PausedState)
     }
