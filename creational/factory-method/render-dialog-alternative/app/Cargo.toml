@@ -1,0 +1,13 @@
+[package]
+edition = "2021"
+name = "render-dialog-alternative"
+version = "1.0.0"
+
+[[bin]]
+name = "factory-method-render-dialog"
+path = "main.rs"
+
+[dependencies]
+gui = { path = "../gui", version = "1.0" }
+html_gui = { path = "../html_gui", version = "1.0" }
+windows_gui = { path = "../windows_gui", version = "1.0" }

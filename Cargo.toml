@@ -15,6 +15,7 @@ members = [
   "creational/builder",
   "creational/factory-method/maze-game",
   "creational/factory-method/render-dialog",
+  "creational/factory-method/render-dialog-alternative/app",
   "creational/prototype",
   "creational/simple-factory",
   "creational/singleton",

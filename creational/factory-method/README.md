@@ -32,10 +32,13 @@ Ordinary Room: #1
 
 ## Render Dialog
 
-Implementing the Factory Method via **dynamic dispatch**.
+This example shows a GUI framework can organize its classes into independent libraries:
+ 
+1. The `gui` library defines interfaces for all the components. It has no external dependencies.
+2. The `html_gui` library provides HTML implementation of the base GUI. Depends on `gui`.
+3. The `windows_gui` library provides Windows implementation of the base GUI. Depends on `gui`.
 
-See [Factory Method Java Example](https://refactoring.guru/design-patterns/factory-method/java/example)
-as a reference.
+The `app` is a client application that can use several implementations of the GUI framework, depending on the current environment or configuration. However, most of the `app` code doesn't depend on specific types of GUI elements. All the client code works with GUI elements through abstract interfaces defined by the `gui` lib.
 
 ### How to Run
 
