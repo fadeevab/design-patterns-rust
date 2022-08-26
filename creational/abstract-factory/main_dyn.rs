@@ -6,7 +6,7 @@ mod gui;
 
 /// The client code calls the creation methods of a factory object instead of
 /// creating products directly with a constructor call.
-fn render(factory: &Box<dyn gui::GuiFactoryDynamic>) {
+fn render(factory: &dyn gui::GuiFactoryDynamic) {
     let button1 = factory.create_button();
     let button2 = factory.create_button();
     let checkbox1 = factory.create_checkbox();
@@ -24,10 +24,10 @@ fn main() {
     let windows = false;
 
     // Allocate a factory object in runtime depending on unpredictable input.
-    let factory: Box<dyn gui::GuiFactoryDynamic> = if windows {
-        Box::new(WindowsFactory)
+    let factory: &dyn gui::GuiFactoryDynamic = if windows {
+        &WindowsFactory
     } else {
-        Box::new(MacFactory)
+        &MacFactory
     };
 
     // Factory invocation can be inlined right here then.
@@ -35,5 +35,5 @@ fn main() {
     button.press();
 
     // Factory object can be passed to a function as a parameter.
-    render(&factory);
+    render(factory);
 }

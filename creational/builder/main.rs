@@ -30,5 +30,5 @@ fn main() {
 
     // The final car manual.
     let manual: Manual = manual_builder.build();
-    println!("Car manual built:\n{}", manual.to_string());
+    println!("Car manual built:\n{}", manual);
 }

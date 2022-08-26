@@ -26,7 +26,7 @@ pub struct Forest {
 
 impl Forest {
     pub fn plant_tree(&mut self, x: u32, y: u32, color: TreeColor, name: String, data: String) {
-        let tree_kind = TreeKind::new(color, name.clone(), data);
+        let tree_kind = TreeKind::new(color, name, data);
 
         // Here is an essence of Flyweight: it's an internal cache,
         // there is always a single instance of a "tree kind" structure.

@@ -3,7 +3,7 @@ use super::Server;
 pub struct Application;
 
 impl Server for Application {
-    fn handle_request(&mut self, url: &String, method: &str) -> (u16, String) {
+    fn handle_request(&mut self, url: &str, method: &str) -> (u16, String) {
         if url == "/app/status" && method == "GET" {
             return (200, "Ok".into());
         }

@@ -9,12 +9,12 @@ use wallet_facade::WalletFacade;
 
 fn main() -> Result<(), String> {
     let mut wallet = WalletFacade::new("abc".into(), 1234);
-    println!("");
+    println!();
 
     // Wallet Facade interacts with the account, code, wallet, notification and
     // ledger behind the scenes.
     wallet.add_money_to_wallet(&"abc".into(), 1234, 10)?;
-    println!("");
+    println!();
 
     wallet.deduct_money_from_wallet(&"abc".into(), 1234, 5)
 }

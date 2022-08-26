@@ -14,5 +14,5 @@ fn main() {
         print!("{}", char::from(byte));
     }
 
-    println!("");
+    println!();
 }
