@@ -18,24 +18,24 @@ impl NginxServer {
         }
     }
 
-    pub fn check_rate_limiting(&mut self, url: &String) -> bool {
-        let rate = self.rate_limiter.entry(url.clone()).or_insert(1);
+    pub fn check_rate_limiting(&mut self, url: &str) -> bool {
+        let rate = self.rate_limiter.entry(url.to_string()).or_insert(1);
 
         if *rate > self.max_allowed_requests {
             return false;
         }
 
         *rate += 1;
-        return true;
+        true
     }
 }
 
 impl Server for NginxServer {
-    fn handle_request(&mut self, url: &String, method: &str) -> (u16, String) {
+    fn handle_request(&mut self, url: &str, method: &str) -> (u16, String) {
         if !self.check_rate_limiting(url) {
             return (403, "Not Allowed".into());
         }
 
-        return self.application.handle_request(url, method);
+        self.application.handle_request(url, method)
     }
 }

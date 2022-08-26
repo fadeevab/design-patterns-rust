@@ -18,7 +18,7 @@ impl Command for CutCommand {
             editor.set_content("".to_string());
         });
 
-        return true;
+        true
     }
 
     fn undo(&mut self, app: &mut Cursive) {

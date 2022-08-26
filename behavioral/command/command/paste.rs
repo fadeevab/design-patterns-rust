@@ -17,7 +17,7 @@ impl Command for PasteCommand {
             editor.set_content(context.clipboard.clone());
         });
 
-        return true;
+        true
     }
 
     fn undo(&mut self, app: &mut Cursive) {

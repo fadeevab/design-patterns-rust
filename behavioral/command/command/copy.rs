@@ -14,7 +14,7 @@ impl Command for CopyCommand {
         context.clipboard = editor.get_content().to_string();
 
         app.set_user_data(context);
-        return false;
+        false
     }
 
     fn undo(&mut self, _: &mut Cursive) {}

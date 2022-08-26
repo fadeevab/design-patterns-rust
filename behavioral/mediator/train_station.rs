@@ -19,10 +19,10 @@ impl Mediator for TrainStation {
     fn notify_about_arrival(&mut self, train_name: &str) -> bool {
         if self.train_on_platform.is_some() {
             self.train_queue.push_back(train_name.into());
-            return false;
+            false
         } else {
             self.train_on_platform.replace(train_name.into());
-            return true;
+            true
         }
     }
 
@@ -53,7 +53,7 @@ impl TrainStation {
     }
 
     pub fn depart(&mut self, name: &'static str) {
-        let train = self.trains.remove(name.into());
+        let train = self.trains.remove(name);
         if let Some(mut train) = train {
             train.depart(self);
         } else {

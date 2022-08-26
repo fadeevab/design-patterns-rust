@@ -26,7 +26,7 @@ fn main() {
             .button("Copy", |s| execute(s, CopyCommand::default()))
             .button("Cut", |s| execute(s, CutCommand::default()))
             .button("Paste", |s| execute(s, PasteCommand::default()))
-            .button("Undo", |s| undo(s))
+            .button("Undo", undo)
             .button("Quit", |s| s.quit()),
     );
 
