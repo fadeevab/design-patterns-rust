@@ -1,4 +1,4 @@
-use super::{MazeGame, Room};
+use super::game::{MazeGame, Room};
 
 #[derive(Clone)]
 pub struct OrdinaryRoom {
@@ -17,11 +17,11 @@ impl Room for OrdinaryRoom {
     }
 }
 
-pub struct OrdinaryMazeGame {
+pub struct OrdinaryMaze {
     rooms: Vec<OrdinaryRoom>,
 }
 
-impl OrdinaryMazeGame {
+impl OrdinaryMaze {
     pub fn new() -> Self {
         Self {
             rooms: vec![OrdinaryRoom::new(1), OrdinaryRoom::new(2)],
@@ -29,7 +29,7 @@ impl OrdinaryMazeGame {
     }
 }
 
-impl MazeGame for OrdinaryMazeGame {
+impl MazeGame for OrdinaryMaze {
     type RoomImpl = OrdinaryRoom;
 
     fn rooms(&self) -> Vec<Self::RoomImpl> {

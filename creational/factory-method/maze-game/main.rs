@@ -1,19 +1,14 @@
 mod game;
+mod magic_maze;
+mod ordinary_maze;
 
-/// The client code demonstrates that it does its own things
-/// (e.g. loading resources) and it can use a factory in a proper place to
-/// construct a game.
-fn run(game: impl game::MazeGame) {
-    println!("Loading resources...");
-    println!("Starting the game...");
-
-    game.play();
-}
+use magic_maze::MagicMaze;
+use ordinary_maze::OrdinaryMaze;
 
 fn main() {
-    let game = game::MagicMazeGame::new();
-    run(game);
+    let magic_maze = MagicMaze::new();
+    game::run(magic_maze);
 
-    let game = game::OrdinaryMazeGame::new();
-    run(game);
+    let ordinary_maze = OrdinaryMaze::new();
+    game::run(ordinary_maze);
 }
