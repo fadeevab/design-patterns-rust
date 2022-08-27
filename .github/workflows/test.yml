@@ -17,6 +17,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run Rustfmt
         run: cargo fmt -- --check
+      - name: Run Clippy
+        run: cargo clippy -- -D clippy::all
       - run: cargo run --bin chain-of-responsibility
       - run: cargo build --bin command # TUI. It can run on the local machine.
       - run: cargo run --bin iterator
