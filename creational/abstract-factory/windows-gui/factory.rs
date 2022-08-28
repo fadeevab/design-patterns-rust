@@ -1,20 +1,8 @@
-use super::{Button, Checkbox, GuiFactory, GuiFactoryDynamic};
+use gui::{Button, Checkbox, GuiFactory, GuiFactoryDynamic};
 
-pub struct WindowsButton;
-pub struct WindowsCheckbox;
+use crate::{button::WindowsButton, checkbox::WindowsCheckbox};
+
 pub struct WindowsFactory;
-
-impl Button for WindowsButton {
-    fn press(&self) {
-        println!("Windows button has pressed");
-    }
-}
-
-impl Checkbox for WindowsCheckbox {
-    fn switch(&self) {
-        println!("Windows checkbox has switched");
-    }
-}
 
 impl GuiFactory for WindowsFactory {
     type B = WindowsButton;

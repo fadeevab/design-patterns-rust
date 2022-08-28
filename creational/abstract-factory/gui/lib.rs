@@ -1,6 +1,3 @@
-pub mod macos;
-pub mod windows;
-
 pub trait Button {
     fn press(&self);
 }

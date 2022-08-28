@@ -1,20 +1,8 @@
-use super::{Button, Checkbox, GuiFactory, GuiFactoryDynamic};
+use gui::{Button, Checkbox, GuiFactory, GuiFactoryDynamic};
 
-pub struct MacButton;
-pub struct MacCheckbox;
+use crate::{button::MacButton, checkbox::MacCheckbox};
+
 pub struct MacFactory;
-
-impl Button for MacButton {
-    fn press(&self) {
-        println!("MacOS button has pressed");
-    }
-}
-
-impl Checkbox for MacCheckbox {
-    fn switch(&self) {
-        println!("MacOS checkbox has switched");
-    }
-}
 
 impl GuiFactory for MacFactory {
     type B = MacButton;
