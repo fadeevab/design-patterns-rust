@@ -1,19 +1,15 @@
-mod button;
-mod dialog;
+mod gui;
+mod html_gui;
+mod init;
+mod windows_gui;
 
-use dialog::{html::HtmlDialog, windows::WindowsDialog, Dialog};
+use init::initialize;
 
 fn main() {
-    // The dialog factory is constructed depending on unpredictable input
-    // (not really unpredictable in this case, but let's imagine it).
-    // We need to put a new object into a `Box` pointer, then it's going to be
-    // used uniformly throughout a code.
-    let dialog: Box<dyn Dialog> = if cfg!(windows) {
-        Box::new(WindowsDialog)
-    } else {
-        Box::new(HtmlDialog)
-    };
-
+    // The rest of the code doesn't depend on specific dialog types, because
+    // it works with all dialog objects via the abstract `Dialog` trait
+    // which is defined in the `gui` module.
+    let dialog = initialize();
     dialog.render();
     dialog.refresh();
 }

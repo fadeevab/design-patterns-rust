@@ -6,10 +6,9 @@ of objects that will be created._
 
 ## Maze Game
 
-Implementing the Factory Method pattern using **static dispatch** (generics).
-
 This example reproduces one from the GoF Design Patterns book:
-https://en.wikipedia.org/wiki/Factory_method_pattern
+https://en.wikipedia.org/wiki/Factory_method_pattern, implementing
+the Factory Method pattern using generics (_static dispatch_).
 
 ### How to Run
 
@@ -32,10 +31,24 @@ Ordinary Room: #1
 
 ## Render Dialog
 
-Implementing the Factory Method via **dynamic dispatch**.
+This example shows a GUI framework can organize its types into
+independent modules:
 
-See [Factory Method Java Example](https://refactoring.guru/design-patterns/factory-method/java/example)
-as a reference.
+1. The `gui` module defines interfaces for all the components.
+   It has no external dependencies.
+2. The `html_gui` module provides HTML implementation of the base GUI.
+   Depends on `gui`.
+3. The `windows_gui` module provides Windows implementation of the base GUI.
+   Depends on `gui`.
+
+The app is a client application that can use several implementations
+of the GUI framework, depending on the current environment or configuration.
+However, most of the app code doesn't depend on specific types of GUI elements.
+All the client code works with GUI elements through abstract interfaces
+defined by the `gui` module.
+
+The [Abstract Factory example](../abstract-factory/) demonstrates even greater
+separation of Factory interface and its implementations.
 
 ### How to Run
 
@@ -46,7 +59,12 @@ cargo run --bin factory-method-render-dialog
 ### Output
 
 ```
+-- No OS detected, creating the HTML GUI --
 <button>Test Button</button>
 Click! Button says - 'Hello World!'
 Dialog - Refresh
 ```
+
+### Reference
+
+This example reproduces [Factory Method Java Example](https://refactoring.guru/design-patterns/factory-method/java/example).
