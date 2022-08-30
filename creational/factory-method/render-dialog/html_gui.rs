@@ -1,4 +1,4 @@
-use super::Button;
+use crate::gui::{Button, Dialog};
 
 pub struct HtmlButton;
 
@@ -10,5 +10,14 @@ impl Button for HtmlButton {
 
     fn on_click(&self) {
         println!("Click! Button says - 'Hello World!'");
+    }
+}
+
+pub struct HtmlDialog;
+
+impl Dialog for HtmlDialog {
+    /// Creates an HTML button.
+    fn create_button(&self) -> Box<dyn Button> {
+        Box::new(HtmlButton)
     }
 }

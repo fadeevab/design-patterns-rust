@@ -1,19 +1,20 @@
 mod game;
+mod magic_maze;
+mod ordinary_maze;
 
-/// The client code demonstrates that it does its own things
-/// (e.g. loading resources) and it can use a factory in a proper place to
-/// construct a game.
-fn run(game: impl game::MazeGame) {
-    println!("Loading resources...");
-    println!("Starting the game...");
+use magic_maze::MagicMaze;
+use ordinary_maze::OrdinaryMaze;
 
-    game.play();
-}
-
+/// The game runs with different mazes depending on the concrete factory type:
+/// it's either an ordinary maze or a magic maze.
+///
+/// For demonstration purposes, both mazes are used to construct the game.
 fn main() {
-    let game = game::MagicMazeGame::new();
-    run(game);
+    // Option 1: The game starts with an ordinary maze.
+    let ordinary_maze = OrdinaryMaze::new();
+    game::run(ordinary_maze);
 
-    let game = game::OrdinaryMazeGame::new();
-    run(game);
+    // Option 2: The game starts with a magic maze.
+    let magic_maze = MagicMaze::new();
+    game::run(magic_maze);
 }
