@@ -1,0 +1,10 @@
+[package]
+edition = "2021"
+name = "windows-gui"
+version = "0.1.0"
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+gui = {path = "../gui", version = "0.1.0"}

@@ -62,5 +62,5 @@ fn main() {
     println!();
 
     println!("Same client code can work with different concrete implementations:");
-    client_code(ConcreteStruct1);
+    client_code(ConcreteStruct2);
 }

@@ -1,0 +1,13 @@
+[package]
+edition = "2021"
+name = "abstract_factory-dyn"
+version = "0.1.0"
+
+[[bin]]
+name = "abstract-factory-dyn"
+path = "main.rs"
+
+[dependencies]
+gui = {path = "../gui", version = "0.1.0"}
+macos-gui = {path = "../macos-gui", version = "0.1.0"}
+windows-gui = {path = "../windows-gui", version = "0.1.0"}
