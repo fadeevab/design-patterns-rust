@@ -47,8 +47,8 @@ However, most of the app code doesn't depend on specific types of GUI elements.
 All the client code works with GUI elements through abstract interfaces
 defined by the `gui` module.
 
-The [Abstract Factory example](../abstract-factory/) demonstrates even greater
-separation of Factory interface and its implementations.
+💡 The [Abstract Factory example](../abstract-factory/) demonstrates even
+greater separation of Factory interface and its implementations.
 
 ### How to Run
 
