@@ -9,4 +9,5 @@ path = "main.rs"
 
 [dependencies]
 draw = "0.3"
+memory-stats = "1.0.0"
 rand = "0.8"
