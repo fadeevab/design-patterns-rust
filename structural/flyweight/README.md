@@ -32,7 +32,8 @@ Memory usage:
 Tree size (16 bytes) * 100000
 + TreeKind size (~30 bytes) * 2
 -------------------------------
-Total: 1MB (instead of 4MB)
+Total: 1688KB (estimated 1562KB),
+       instead of 4492KB
 ```
 
 ## Overview

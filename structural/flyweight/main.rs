@@ -12,6 +12,8 @@ const TREE_TYPES: u32 = 2;
 fn main() {
     let forest = &mut Forest::default();
 
+    let phys_mem_before = memory_stats::memory_stats().unwrap().physical_mem;
+
     for _ in 0..TREES_TO_DRAW / TREE_TYPES {
         let mut rng = rand::thread_rng();
 
@@ -32,6 +34,8 @@ fn main() {
         );
     }
 
+    let phys_mem_after = memory_stats::memory_stats().unwrap().physical_mem;
+
     let mut canvas = Canvas::new(CANVAS_SIZE, CANVAS_SIZE);
     forest.draw(&mut canvas);
 
@@ -45,8 +49,9 @@ fn main() {
     println!("+ TreeKind size (~30 bytes) * {}", TREE_TYPES);
     println!("-------------------------------");
     println!(
-        "Total: {}MB (instead of {}MB)",
-        ((TREES_TO_DRAW * 16 + TREE_TYPES * 30) / 1024 / 1024),
-        ((TREES_TO_DRAW * 46) / 1024 / 1024)
+        "Total: {}KB (estimated {}KB),\n       instead of {}KB",
+        (phys_mem_after - phys_mem_before) / 1024,
+        (TREES_TO_DRAW * 16 + TREE_TYPES * 30) / 1024,
+        ((TREES_TO_DRAW * 46) / 1024)
     );
 }
