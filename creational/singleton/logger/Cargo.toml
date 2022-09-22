@@ -1,0 +1,11 @@
+[package]
+edition = "2021"
+name = "singleton-logger"
+version = "0.1.0"
+
+[[bin]]
+name = "singleton-logger"
+path = "main.rs"
+
+[dependencies]
+once_cell = "1.15"
