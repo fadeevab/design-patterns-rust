@@ -8,8 +8,8 @@ lazy_static = "1.4.0"
 once_cell = "1.15"
 
 [[bin]]
-name = "singleton-safe"
-path = "safe.rs"
+name = "singleton-local"
+path = "local.rs"
 
 [[bin]]
 name = "singleton-lazy"

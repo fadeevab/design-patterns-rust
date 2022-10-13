@@ -38,7 +38,7 @@ jobs:
       - run: cargo run --bin factory-method-render-dialog
       - run: cargo run --bin prototype
       - run: cargo run --bin simple-factory
-      - run: cargo run --bin singleton-safe
+      - run: cargo run --bin singleton-local
       - run: cargo run --bin singleton-lazy
       # - run: cargo run --bin singleton-mutex # Requires Rust 1.63
       - run: cargo run --bin singleton-once

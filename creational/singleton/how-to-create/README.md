@@ -28,20 +28,19 @@ in your code:
 2. [lazy_static::lazy_static](https://docs.rs/lazy_static/latest/lazy_static)
 3. [std::sync::Mutex](https://doc.rust-lang.org/std/sync/struct.Mutex.html)
 
-💡 Starting with **Rust 1.63**, `Mutex::new` is `const`, you can use global
-static `Mutex` locks without needing lazy initialization. See the `mutex.rs`
-example below.
+In a general case, you can start with `OnceCell` like in the `once.rs` example
+(see below).
 
-## `safe.rs`
+## `local.rs`
 
-A pure safe way to implement Singleton in Rust is using NO global variables
+A safe way to implement Singleton in Rust is using NO global variables
 at all and passing everything around through function arguments.
 The oldest living variable is an object created at the start of the `main()`.
 
 ### How to Run
 
 ```bash
-cargo run --bin singleton-safe
+cargo run --bin singleton-local
 ```
 
 ### Output
@@ -55,8 +54,9 @@ Final state: 1
 This is a singleton implementation via `lazy_static!`.
 
 `lazy-static` allows declaring a static variable with lazy initialization
-at first access. It is actually implemented via `unsafe` with `static mut`
-manipulation, however, it keeps your code free of explicit `unsafe` blocks.
+at first access. A drawback of `lazy_static!` is that it doesn't allow
+initialization at the arbitrary code place, only in the static block
+with predefined instructions.
 
 ### How to Run
 
@@ -73,9 +73,12 @@ Called 3
 ## `once.rs`
 
 `OnceCell` allows having a custom initialization of a singleton at an
-**arbitrary place** unlike `lazy_static!`, where the initialization must be
+**arbitrary place**, unlike `lazy_static!`, where the initialization must be
 placed in a static block. `Mutex` is still needed there to make an actual object
 modifiable without an `unsafe` block.
+
+A [`logger`](../logger/), a practical example of Singleton, is
+implemented via `OnceCell`.
 
 ### How to Run
 
