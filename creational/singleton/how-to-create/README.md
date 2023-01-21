@@ -118,5 +118,6 @@ cargo run --bin singleton-mutex
 ### Output
 
 ```
-Called 3 times
+Called 3 times: [1, 1, 1]
+New singleton object: [3, 4, 5]
 ```

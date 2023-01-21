@@ -21,5 +21,11 @@ fn main() {
     do_a_call();
     do_a_call();
 
-    println!("Called {} times", ARRAY.lock().unwrap().len());
+    let array = ARRAY.lock().unwrap();
+    println!("Called {} times: {:?}", array.len(), array);
+    drop(array);
+
+    *ARRAY.lock().unwrap() = vec![3, 4, 5];
+
+    println!("New singleton object: {:?}", ARRAY.lock().unwrap());
 }
