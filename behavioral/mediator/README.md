@@ -1,6 +1,6 @@
 # Mediator
 
-_*Mediator* restricts direct communications between the objects and forces them
+_**Mediator** restricts direct communications between the objects and forces them
 to collaborate only via a mediator object_. It also stands for a Controller in the MVC (Model-View-Controller) pattern.
 
 ## How to Run
