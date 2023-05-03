@@ -31,12 +31,12 @@ impl Mediator for StationManager {
         self.trains.get(&train_name).expect("A train should exist");
 
         if self.train_on_platform.borrow().is_some() {
-            self.train_queue.borrow_mut().push_back(train_name.clone());
+            self.train_queue.borrow_mut().push_back(train_name);
             return false;
         }
 
         self.train_on_platform.replace(Some(train_name));
-        return true;
+        true
     }
 
     fn notify_about_departure(&self, train: &dyn Train) {
