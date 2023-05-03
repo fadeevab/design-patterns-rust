@@ -42,7 +42,8 @@ Also, the examples contain a **README.md** with instructions and additional expl
 cargo run --bin chain-of-responsibility
 cargo run --bin command
 cargo run --bin iterator
-cargo run --bin mediator
+cargo run --bin mediator-top-down
+cargo run --bin mediator-rc-refcell
 cargo run --bin memento
 cargo run --bin memento-serde
 cargo run --bin observer

@@ -23,6 +23,8 @@ jobs:
       - run: cargo build --bin command # TUI. It can run on the local machine.
       - run: cargo run --bin iterator
       - run: cargo run --bin mediator
+      - run: cargo run --bin mediator-top-down
+      - run: cargo run --bin mediator-rc-refcell
       - run: cargo run --bin memento
       - run: cargo run --bin memento-serde
       - run: cargo run --bin observer

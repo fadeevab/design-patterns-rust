@@ -1,8 +1,12 @@
 [package]
 edition = "2021"
-name = "mediator"
+name = "mediator-top-down"
 version = "0.1.0"
 
 [[bin]]
 name = "mediator"
+path = "main.rs"
+
+[[bin]]
+name = "mediator-top-down"
 path = "main.rs"
