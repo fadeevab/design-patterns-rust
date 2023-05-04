@@ -15,6 +15,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Use Rust 1.53
+        run: rustup install 1.53
       - name: Run Rustfmt
         run: cargo fmt -- --check
       - name: Run Clippy
@@ -23,6 +25,8 @@ jobs:
       - run: cargo build --bin command # TUI. It can run on the local machine.
       - run: cargo run --bin iterator
       - run: cargo run --bin mediator
+      - run: cargo run --bin mediator-top-down
+      - run: cargo run --bin mediator-rc-refcell
       - run: cargo run --bin memento
       - run: cargo run --bin memento-serde
       - run: cargo run --bin observer
