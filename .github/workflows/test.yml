@@ -24,7 +24,6 @@ jobs:
       - run: cargo run --bin chain-of-responsibility
       - run: cargo build --bin command # TUI. It can run on the local machine.
       - run: cargo run --bin iterator
-      - run: cargo run --bin mediator
       - run: cargo run --bin mediator-top-down
       - run: cargo run --bin mediator-rc-refcell
       - run: cargo run --bin memento
