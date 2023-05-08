@@ -8,4 +8,4 @@ name = "command"
 path = "main.rs"
 
 [dependencies]
-cursive = {version = "0.19", default-features = false, features = ["termion-backend"]}
+cursive = {version = "0.20", default-features = false, features = ["crossterm-backend"]}
