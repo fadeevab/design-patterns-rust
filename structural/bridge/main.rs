@@ -2,7 +2,7 @@ mod device;
 mod remotes;
 
 use device::{Device, Radio, Tv};
-use remotes::{AdvancedRemove, BasicRemote, HasMutableDevice, Remote};
+use remotes::{AdvancedRemote, BasicRemote, HasMutableDevice, Remote};
 
 fn main() {
     test_device(Tv::default());
@@ -16,7 +16,7 @@ fn test_device(device: impl Device + Clone) {
     basic_remote.device().print_status();
 
     println!("Tests with advanced remote.");
-    let mut advanced_remote = AdvancedRemove::new(device);
+    let mut advanced_remote = AdvancedRemote::new(device);
     advanced_remote.power();
     advanced_remote.mute();
     advanced_remote.device().print_status();
