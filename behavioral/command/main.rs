@@ -23,7 +23,7 @@ fn main() {
     app.add_layer(
         Dialog::around(EditView::default().with_name("Editor"))
             .title("Type and use buttons")
-            .button("Copy", |s| execute(s, CopyCommand::default()))
+            .button("Copy", |s| execute(s, CopyCommand))
             .button("Cut", |s| execute(s, CutCommand::default()))
             .button("Paste", |s| execute(s, PasteCommand::default()))
             .button("Undo", undo)

@@ -1,7 +1,7 @@
 mod advanced;
 mod basic;
 
-pub use advanced::AdvancedRemove;
+pub use advanced::AdvancedRemote;
 pub use basic::BasicRemote;
 
 use crate::device::Device;

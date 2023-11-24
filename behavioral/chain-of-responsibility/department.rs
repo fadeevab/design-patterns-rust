@@ -28,8 +28,6 @@ pub trait Department {
 }
 
 /// Helps to wrap an object into a boxed type.
-pub(self) fn into_next(
-    department: impl Department + Sized + 'static,
-) -> Option<Box<dyn Department>> {
+pub fn into_next(department: impl Department + Sized + 'static) -> Option<Box<dyn Department>> {
     Some(Box::new(department))
 }
