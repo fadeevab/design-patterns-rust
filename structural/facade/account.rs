@@ -16,11 +16,3 @@ impl Account {
         Ok(())
     }
 }
-
-// func (a *Account) checkAccount(accountName string) error {
-//     if a.name != accountName {
-//         return fmt.Errorf("Account Name is incorrect")
-//     }
-//     fmt.Println("Account Verified")
-//     return nil
-// }
