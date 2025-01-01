@@ -1,3 +1,4 @@
+#![allow(unused)]
 mod device;
 mod remotes;
 
@@ -13,11 +14,13 @@ fn test_device(device: impl Device + Clone) {
     println!("Tests with basic remote.");
     let mut basic_remote = BasicRemote::new(device.clone());
     basic_remote.power();
+    basic_remote.volume_up();
     basic_remote.device().print_status();
 
     println!("Tests with advanced remote.");
     let mut advanced_remote = AdvancedRemote::new(device);
     advanced_remote.power();
-    advanced_remote.mute();
+    advanced_remote.volume_down();
+    advanced_remote.mute(); // Extended functionality of the advanced remote.
     advanced_remote.device().print_status();
 }

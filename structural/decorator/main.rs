@@ -6,7 +6,7 @@ fn main() {
     // A buffered reader decorates a vector reader which wraps input data.
     let mut input = BufReader::new(Cursor::new("Input data"));
 
-    input.read(&mut buf).ok();
+    input.read_exact(&mut buf).ok();
 
     print!("Read from a buffered reader: ");
 

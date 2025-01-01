@@ -2,8 +2,7 @@
 //! https://stackoverflow.com/questions/27791532/how-do-i-create-a-global-mutable-singleton
 //!
 //! Starting with Rust 1.63, it can be easier to work with global mutable
-//! singletons, although it's still preferable to avoid global variables in most
-//! cases.
+//! singletons.
 //!
 //! Now that `Mutex::new` is `const`, you can use global static `Mutex` locks
 //! without needing lazy initialization.

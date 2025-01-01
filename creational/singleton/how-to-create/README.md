@@ -97,8 +97,7 @@ cargo run --bin singleton-once
 ⚠ Starting with `rustc 1.63`.
 
 > Starting with `Rust 1.63`, it can be easier to work with global mutable
-> singletons, although it's still preferable to avoid global variables in most
-> cases.
+> singletons.
 >
 > Now that `Mutex::new` is `const`, you can use global static `Mutex` locks
 > without needing lazy initialization.
