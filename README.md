@@ -18,7 +18,7 @@ The repository is developed to be a part of the
 
 ## 🔧 Requirements
 
-These examples have been tested with a _stable_ `rustc 1.62` (2021 edition).
+These examples have been tested with a _stable_ `rustc 1.82` (2021 edition).
 
 All examples can be launched via the command line, using `cargo` as follows:
 
@@ -61,7 +61,7 @@ cargo run --bin prototype
 cargo run --bin simple-factory
 cargo run --bin singleton-local
 cargo run --bin singleton-lazy
-cargo run --bin singleton-mutex # Requires Rust 1.63
+cargo run --bin singleton-mutex
 cargo run --bin singleton-once
 cargo run --bin singleton-logger
 cargo run --bin static-creation-method

@@ -15,8 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Rust 1.53
-        run: rustup install 1.53
       - name: Run Rustfmt
         run: cargo fmt -- --check
       - name: Run Clippy
@@ -43,7 +41,7 @@ jobs:
       - run: cargo run --bin simple-factory
       - run: cargo run --bin singleton-local
       - run: cargo run --bin singleton-lazy
-      # - run: cargo run --bin singleton-mutex # Requires Rust 1.63
+      - run: cargo run --bin singleton-mutex
       - run: cargo run --bin singleton-once
       - run: cargo run --bin singleton-logger
       - run: cargo run --bin static-creation-method
